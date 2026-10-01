@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quezon City CCESD</title>
-  <meta http-equiv="refresh" content="0; url=/QC-CCESD-DASHBOARD-WEBSITE/">
+  <title>Redirecting to CCESD public home</title>
   <script>
-    window.location.replace('/QC-CCESD-DASHBOARD-WEBSITE/');
+    (function () {
+      var home = window.location.origin + '/QC-CCESD-DASHBOARD-WEBSITE/';
+      window.location.replace(home);
+    })();
   </script>
+  <meta http-equiv="refresh" content="0; url=/QC-CCESD-DASHBOARD-WEBSITE/">
 </head>
 <body>
-  <p>Redirecting to the public site…</p>
-  <p><a href="/QC-CCESD-DASHBOARD-WEBSITE/">Open the public site</a></p>
+  <p>Redirecting to the public home page…</p>
+  <p><a href="/QC-CCESD-DASHBOARD-WEBSITE/">Open public home</a></p>
 </body>
 </html>
