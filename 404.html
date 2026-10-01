@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting to CCESD public home</title>
+  <title>CCESD</title>
   <script>
     (function () {
-      var home = window.location.origin + '/QC-CCESD-DASHBOARD-WEBSITE/';
-      window.location.replace(home);
+      var base = "/QC-CCESD-DASHBOARD-WEBSITE/";
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+
+      // If GitHub Pages serves this file for a missing route, return to
+      // the public application root. Keep query/hash information.
+      if (path !== base && path !== base.replace(/\/$/, "")) {
+        window.location.replace(base + search + hash);
+      } else {
+        window.location.replace(base);
+      }
     })();
   </script>
-  <meta http-equiv="refresh" content="0; url=/QC-CCESD-DASHBOARD-WEBSITE/">
 </head>
 <body>
-  <p>Redirecting to the public home page…</p>
+  <p>Opening the CCESD public site…</p>
   <p><a href="/QC-CCESD-DASHBOARD-WEBSITE/">Open public home</a></p>
 </body>
 </html>
