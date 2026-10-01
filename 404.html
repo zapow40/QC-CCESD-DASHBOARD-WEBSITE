@@ -1,28 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CCESD</title>
-  <script>
-    (function () {
-      var base = "/QC-CCESD-DASHBOARD-WEBSITE/";
-      var path = window.location.pathname;
-      var search = window.location.search;
-      var hash = window.location.hash;
-
-      // If GitHub Pages serves this file for a missing route, return to
-      // the public application root. Keep query/hash information.
-      if (path !== base && path !== base.replace(/\/$/, "")) {
-        window.location.replace(base + search + hash);
-      } else {
-        window.location.replace(base);
-      }
-    })();
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CCESD</title>
+<script>location.replace("/QC-CCESD-DASHBOARD-WEBSITE/" + location.search + location.hash);</script>
 </head>
-<body>
-  <p>Opening the CCESD public site…</p>
-  <p><a href="/QC-CCESD-DASHBOARD-WEBSITE/">Open public home</a></p>
-</body>
+<body><p>Opening CCESD…</p></body>
 </html>
